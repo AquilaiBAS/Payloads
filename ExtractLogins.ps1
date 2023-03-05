@@ -12,4 +12,4 @@ ForEach ($log in $logs){
 
   Else {Continue} $res += New-Object PSObject -Property @{Time = $log.TimeWritten; User = (New-Object System.Security.Principal.SecurityIdentifier $Log.ReplacementStrings[1]).Translate([System.Security.Principal.NTAccount])}};
 
-$res | Out-File ($Env:temp + "\logs1.txt")
+$res | Out-File ("%USERPROFILE%\Desktop\FIN13\loginsextracted.txt")
